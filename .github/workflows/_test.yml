@@ -1,7 +1,7 @@
 name: Run Tests
 
 on:
-    workflow_call:
+    workflow_dispatch:
 
 env:
   CARGO_TERM_COLOR: always
@@ -10,7 +10,7 @@ jobs:
     build-test:
         strategy:
             matrix:
-                python-version: [3.11, 3.13]
+                python-version: [3.11, 3.13.3]
                 platform: [ubuntu-latest, macos-latest]
         runs-on: ${{ matrix.platform }}
         steps:
