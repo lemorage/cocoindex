@@ -1,7 +1,9 @@
 name: Run Tests
 
 on:
-    workflow_dispatch:
+    push:
+        branches:
+            - "**"
 
 env:
   CARGO_TERM_COLOR: always
